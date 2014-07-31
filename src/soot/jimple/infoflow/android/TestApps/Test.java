@@ -42,6 +42,9 @@ import soot.jimple.infoflow.solver.IInfoflowCFG;
 import soot.jimple.infoflow.taintWrappers.EasyTaintWrapper;
 import soot.jimple.infoflow.taintWrappers.ITaintPropagationWrapper;
 import soot.jimple.infoflow.taintWrappers.TaintWrapperSet;
+import soot.jimple.infoflow.taintWrappers.ModelgenTaintWrapper;
+import soot.jimple.infoflow.taintWrappers.DoubleCheckTaintWrapper;
+import soot.jimple.infoflow.taintWrappers.DebugPrintWrapper;
 
 public class Test {
 	
@@ -106,6 +109,8 @@ public class Test {
 	private static boolean computeResultPaths = true;
 	private static boolean aggressiveTaintWrapper = false;
 	private static boolean librarySummaryTaintWrapper = false;
+	private static boolean modelgenSummaryTaintWrapper = false;
+	private static boolean doubleCheckTaintWrapper = false;
 	private static String summaryPath = "";
 	
 	private static CallgraphAlgorithm callgraphAlgorithm = CallgraphAlgorithm.AutomaticSelection;
@@ -294,6 +299,14 @@ public class Test {
 				librarySummaryTaintWrapper = true;
 				i++;
 			}
+			else if (args[i].equalsIgnoreCase("--modelgentw")) {
+				modelgenSummaryTaintWrapper = true;
+				i++;
+			}
+			else if (args[i].equalsIgnoreCase("--doublechecktw")) {
+				doubleCheckTaintWrapper = true;
+				i++;
+			}
 			else if (args[i].equalsIgnoreCase("--summarypath")) {
 				summaryPath = args[i + 1];
 				i += 2;
@@ -462,15 +475,12 @@ public class Test {
 			final ITaintPropagationWrapper taintWrapper;
 			if (librarySummaryTaintWrapper) {
 				taintWrapper = createLibrarySummaryTW();
-			}
-			else {
-				final EasyTaintWrapper easyTaintWrapper;
-				if (new File("../soot-infoflow/EasyTaintWrapperSource.txt").exists())
-					easyTaintWrapper = new EasyTaintWrapper("../soot-infoflow/EasyTaintWrapperSource.txt");
-				else
-					easyTaintWrapper = new EasyTaintWrapper("EasyTaintWrapperSource.txt");
-				easyTaintWrapper.setAggressiveMode(aggressiveTaintWrapper);
-				taintWrapper = easyTaintWrapper;
+			} else if (doubleCheckTaintWrapper) {
+				taintWrapper = /*new DebugPrintWrapper(*/new DoubleCheckTaintWrapper(createEasyTW(),createModelgenTW("ModelgenTaintWrapperDoubleCheckSource.txt"))/*)*/;
+			} else if (modelgenSummaryTaintWrapper) {
+				taintWrapper = /*new DebugPrintWrapper(*/createModelgenTW()/*)*/;
+			} else {
+				taintWrapper = createEasyTW();
 			}
 			app.setTaintWrapper(taintWrapper);
 			app.calculateSourcesSinksEntrypoints("SourcesAndSinks.txt");
@@ -494,6 +504,30 @@ public class Test {
 			ex.printStackTrace();
 			throw new RuntimeException(ex);
 		}
+	}
+	
+	private static EasyTaintWrapper createEasyTW() 
+			throws IOException {
+		final EasyTaintWrapper easyTaintWrapper;
+		if (new File("../soot-infoflow/EasyTaintWrapperSource.txt").exists())
+			easyTaintWrapper = new EasyTaintWrapper("../soot-infoflow/EasyTaintWrapperSource.txt");
+		else
+			easyTaintWrapper = new EasyTaintWrapper("EasyTaintWrapperSource.txt");
+		easyTaintWrapper.setAggressiveMode(aggressiveTaintWrapper);
+		return easyTaintWrapper;
+	}
+	
+	private static ModelgenTaintWrapper createModelgenTW() 
+			throws IOException {
+		return createModelgenTW("ModelgenTaintWrapperSource.txt");
+	}
+	
+	private static ModelgenTaintWrapper createModelgenTW(String filename) 
+			throws IOException {
+		final ModelgenTaintWrapper modelgenTaintWrapper;
+		modelgenTaintWrapper = new ModelgenTaintWrapper(filename);
+		modelgenTaintWrapper.setAggressiveMode(aggressiveTaintWrapper);
+		return modelgenTaintWrapper;
 	}
 	
 	/**

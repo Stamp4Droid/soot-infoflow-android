@@ -1,0 +1,581 @@
+# java.lang.* models, designed to be equivalent to EasyTaintWrapper models
+
+<java.lang.StringBuilder: void <init>(java.lang.String)>
+	this->return
+	arg#1->return
+	arg#1->this
+<java.lang.StringBuilder: java.lang.StringBuilder append(boolean)>
+	this->return
+	arg#1->return
+	arg#1->this
+<java.lang.StringBuilder: java.lang.StringBuilder append(char)>
+	this->return
+	arg#1->return
+	arg#1->this
+<java.lang.StringBuilder: java.lang.StringBuilder append(char[])>
+	this->return
+	arg#1->return
+	arg#1->this
+<java.lang.StringBuilder: java.lang.StringBuilder append(char[],int,int)>
+	this->return
+	arg#1->return
+	arg#1->this
+	arg#2->return
+	arg#2->this
+	arg#3->return
+	arg#3->this
+<java.lang.StringBuilder: java.lang.StringBuilder append(double)>
+	this->return
+	arg#1->return
+	arg#1->this
+<java.lang.StringBuilder: java.lang.StringBuilder append(float)>
+	this->return
+	arg#1->return
+	arg#1->this
+<java.lang.StringBuilder: java.lang.StringBuilder append(int)>
+	this->return
+	arg#1->return
+	arg#1->this
+<java.lang.StringBuilder: java.lang.StringBuilder append(long)>
+	this->return
+	arg#1->return
+	arg#1->this
+<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>
+	this->return
+	arg#1->return
+	arg#1->this
+<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>
+	this->return
+	arg#1->return
+	arg#1->this
+<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.CharSequence)>
+	this->return
+	arg#1->return
+	arg#1->this
+<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.CharSequence,int,int)>
+	this->return
+	arg#1->return
+	arg#1->this
+	arg#2->return
+	arg#2->this
+	arg#3->return
+	arg#3->this
+<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.StringBuffer)>
+	this->return
+	arg#1->return
+	arg#1->this
+<java.lang.StringBuilder: java.lang.StringBuilder insert(int,boolean)>
+	this->return
+	arg#1->return
+	arg#1->this
+	arg#2->return
+	arg#2->this
+<java.lang.StringBuilder: java.lang.StringBuilder insert(int,char)>
+	this->return
+	arg#1->return
+	arg#1->this
+	arg#2->return
+	arg#2->this
+<java.lang.StringBuilder: java.lang.StringBuilder insert(int,char[])>
+	this->return
+	arg#1->return
+	arg#1->this
+	arg#2->return
+	arg#2->this
+<java.lang.StringBuilder: java.lang.StringBuilder insert(int,char[],int,int)>
+	this->return
+	arg#1->return
+	arg#1->this
+	arg#2->return
+	arg#2->this
+	arg#3->return
+	arg#3->this
+	arg#4->return
+	arg#4->this
+<java.lang.StringBuilder: java.lang.StringBuilder insert(int,double)>
+	this->return
+	arg#1->return
+	arg#1->this
+	arg#2->return
+	arg#2->this
+<java.lang.StringBuilder: java.lang.StringBuilder insert(int,float)>
+	this->return
+	arg#1->return
+	arg#1->this
+	arg#2->return
+	arg#2->this
+<java.lang.StringBuilder: java.lang.StringBuilder insert(int,int)>
+	this->return
+	arg#1->return
+	arg#1->this
+	arg#2->return
+	arg#2->this
+<java.lang.StringBuilder: java.lang.StringBuilder insert(int,long)>
+	this->return
+	arg#1->return
+	arg#1->this
+	arg#2->return
+	arg#2->this
+<java.lang.StringBuilder: java.lang.StringBuilder insert(int,java.lang.Object)>
+	this->return
+	arg#1->return
+	arg#1->this
+	arg#2->return
+	arg#2->this
+<java.lang.StringBuilder: java.lang.StringBuilder insert(int,java.lang.String)>
+	this->return
+	arg#1->return
+	arg#1->this
+	arg#2->return
+	arg#2->this
+<java.lang.StringBuilder: java.lang.StringBuilder insert(int,java.lang.CharSequence)>
+	this->return
+	arg#1->return
+	arg#1->this
+	arg#2->return
+	arg#2->this
+<java.lang.StringBuilder: java.lang.StringBuilder insert(int,java.lang.CharSequence,int,int)>
+	this->return
+	arg#1->return
+	arg#1->this
+	arg#2->return
+	arg#2->this
+	arg#3->return
+	arg#3->this
+	arg#4->return
+	arg#4->this
+
+<java.lang.StringBuffer: void <init>(java.lang.String)>
+	this->return
+	arg#1->return
+	arg#1->this
+<java.lang.StringBuffer: java.lang.StringBuffer append(boolean)>
+	this->return
+	arg#1->return
+	arg#1->this
+<java.lang.StringBuffer: java.lang.StringBuffer append(char)>
+	this->return
+	arg#1->return
+	arg#1->this
+<java.lang.StringBuffer: java.lang.StringBuffer append(char[])>
+	this->return
+	arg#1->return
+	arg#1->this
+<java.lang.StringBuffer: java.lang.StringBuffer append(char[],int,int)>
+	this->return
+	arg#1->return
+	arg#1->this
+	arg#2->return
+	arg#2->this
+	arg#3->return
+	arg#3->this
+<java.lang.StringBuffer: java.lang.StringBuffer append(double)>
+	this->return
+	arg#1->return
+	arg#1->this
+<java.lang.StringBuffer: java.lang.StringBuffer append(float)>
+	this->return
+	arg#1->return
+	arg#1->this
+<java.lang.StringBuffer: java.lang.StringBuffer append(int)>
+	this->return
+	arg#1->return
+	arg#1->this
+<java.lang.StringBuffer: java.lang.StringBuffer append(long)>
+	this->return
+	arg#1->return
+	arg#1->this
+<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>
+	this->return
+	arg#1->return
+	arg#1->this
+<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>
+	this->return
+	arg#1->return
+	arg#1->this
+<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.CharSequence)>
+	this->return
+	arg#1->return
+	arg#1->this
+<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.CharSequence,int,int)>
+	this->return
+	arg#1->return
+	arg#1->this
+	arg#2->return
+	arg#2->this
+	arg#3->return
+	arg#3->this
+<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.StringBuffer)>
+	this->return
+	arg#1->return
+	arg#1->this
+<java.lang.StringBuffer: java.lang.StringBuffer insert(int,boolean)>
+	this->return
+	arg#1->return
+	arg#1->this
+	arg#2->return
+	arg#2->this
+<java.lang.StringBuffer: java.lang.StringBuffer insert(int,char)>
+	this->return
+	arg#1->return
+	arg#1->this
+	arg#2->return
+	arg#2->this
+<java.lang.StringBuffer: java.lang.StringBuffer insert(int,char[])>
+	this->return
+	arg#1->return
+	arg#1->this
+	arg#2->return
+	arg#2->this
+<java.lang.StringBuffer: java.lang.StringBuffer insert(int,char[],int,int)>
+	this->return
+	arg#1->return
+	arg#1->this
+	arg#2->return
+	arg#2->this
+	arg#3->return
+	arg#3->this
+	arg#4->return
+	arg#4->this
+<java.lang.StringBuffer: java.lang.StringBuffer insert(int,double)>
+	this->return
+	arg#1->return
+	arg#1->this
+	arg#2->return
+	arg#2->this
+<java.lang.StringBuffer: java.lang.StringBuffer insert(int,float)>
+	this->return
+	arg#1->return
+	arg#1->this
+	arg#2->return
+	arg#2->this
+<java.lang.StringBuffer: java.lang.StringBuffer insert(int,int)>
+	this->return
+	arg#1->return
+	arg#1->this
+	arg#2->return
+	arg#2->this
+<java.lang.StringBuffer: java.lang.StringBuffer insert(int,long)>
+	this->return
+	arg#1->return
+	arg#1->this
+	arg#2->return
+	arg#2->this
+<java.lang.StringBuffer: java.lang.StringBuffer insert(int,java.lang.Object)>
+	this->return
+	arg#1->return
+	arg#1->this
+	arg#2->return
+	arg#2->this
+<java.lang.StringBuffer: java.lang.StringBuffer insert(int,java.lang.String)>
+	this->return
+	arg#1->return
+	arg#1->this
+	arg#2->return
+	arg#2->this
+<java.lang.StringBuffer: java.lang.StringBuffer insert(int,java.lang.CharSequence)>
+	this->return
+	arg#1->return
+	arg#1->this
+	arg#2->return
+	arg#2->this
+<java.lang.StringBuffer: java.lang.StringBuffer insert(int,java.lang.CharSequence,int,int)>
+	this->return
+	arg#1->return
+	arg#1->this
+	arg#2->return
+	arg#2->this
+	arg#3->return
+	arg#3->this
+	arg#4->return
+	arg#4->this
+
+<java.lang.String: void <init>(byte[])>
+	this->return
+	arg#1->return
+	arg#1->this
+<java.lang.String: void <init>(byte[],int,int)>
+	this->return
+	arg#1->return
+	arg#1->this
+	arg#2->return
+	arg#2->this
+	arg#3->return
+	arg#3->this
+<java.lang.String: void <init>(byte[],int,int,java.lang.String)>
+	this->return
+	arg#1->return
+	arg#1->this
+	arg#2->return
+	arg#2->this
+	arg#3->return
+	arg#3->this
+	arg#4->return
+	arg#4->this
+<java.lang.String: void <init>(byte[],java.lang.String)>
+	this->return
+	arg#1->return
+	arg#1->this
+	arg#2->return
+	arg#2->this
+<java.lang.String: void <init>(char[])>
+	this->return
+	arg#1->return
+	arg#1->this
+<java.lang.String: void <init>(char[],int,int)>
+	this->return
+	arg#1->return
+	arg#1->this
+	arg#2->return
+	arg#2->this
+	arg#3->return
+	arg#3->this
+<java.lang.String: void <init>(int[],int,int)>
+	this->return
+	arg#1->return
+	arg#1->this
+	arg#2->return
+	arg#2->this
+	arg#3->return
+	arg#3->this
+<java.lang.String: void <init>(java.lang.String)>
+	this->return
+	arg#1->return
+	arg#1->this
+<java.lang.String: void <init>(java.lang.StringBuffer)>
+	this->return
+	arg#1->return
+	arg#1->this
+<java.lang.String: void <init>(java.lang.StringBuilder)>
+	this->return
+	arg#1->return
+	arg#1->this
+
+<java.lang.String: java.lang.String valueOf(boolean)>
+	arg#0->return
+<java.lang.String: java.lang.String valueOf(char)>
+	arg#0->return
+<java.lang.String: java.lang.String valueOf(char[])>
+	arg#0->return
+<java.lang.String: java.lang.String valueOf(char[],int,int)>
+	arg#0->return
+	arg#1->return
+	arg#2->return
+<java.lang.String: java.lang.String valueOf(double)>
+	arg#0->return
+<java.lang.String: java.lang.String valueOf(float)>
+	arg#0->return
+<java.lang.String: java.lang.String valueOf(int)>
+	arg#0->return
+<java.lang.String: java.lang.String valueOf(long)>
+	arg#0->return
+<java.lang.String: java.lang.String valueOf(java.lang.Object)>
+	arg#0->return
+
+<java.lang.String: java.lang.String concat(java.lang.String)>
+	this->return
+	arg#1->return
+	arg#1->this
+
+<java.lang.String: java.lang.String format(java.util.Locale,java.lang.String,java.lang.Object[])>
+	this->return
+	arg#1->return
+	arg#1->this
+	arg#2->return
+	arg#2->this
+	arg#3->return
+	arg#3->this
+<java.lang.String: java.lang.String format(java.lang.String,java.lang.Object[])>
+	this->return
+	arg#1->return
+	arg#1->this
+	arg#2->return
+	arg#2->this
+
+<java.lang.String: char[] toCharArray()>
+	this->return
+
+<java.lang.String: java.lang.String replaceAll(java.lang.String,java.lang.String)>
+	this->return
+	arg#1->return
+	arg#1->this
+	arg#2->return
+	arg#2->this
+
+<java.lang.Byte: java.lang.Byte valueOf(byte)>
+	arg#0->return
+<java.lang.Byte: java.lang.Byte valueOf(java.lang.String)>
+	arg#0->return
+<java.lang.Byte: java.lang.Byte valueOf(java.lang.String,int)>
+	arg#0->return
+	arg#1->return
+<java.lang.Byte: long parseByte(java.lang.String)>
+	this->return
+	arg#1->return
+	arg#1->this
+<java.lang.Byte: long parseByte(java.lang.String,int)>
+	this->return
+	arg#1->return
+	arg#1->this
+	arg#2->return
+	arg#2->this
+
+<java.lang.Integer: java.lang.String toBinaryString(int)>
+	arg#0->return
+<java.lang.Integer: java.lang.String toHexString(int)>
+	arg#0->return
+<java.lang.Integer: java.lang.String toOctalString(int)>
+	arg#0->return
+
+<java.lang.Integer: void <init>(int)>
+	this->return
+	arg#1->return
+	arg#1->this
+<java.lang.Integer: void <init>(java.lang.String)>
+	this->return
+	arg#1->return
+	arg#1->this
+<java.lang.Integer: int parseInt(java.lang.String)>
+	arg#0->return
+<java.lang.Integer: int parseInt(java.lang.String,int)>
+	arg#0->return
+	arg#1->return
+<java.lang.Integer: java.lang.Integer valueOf(int)>
+	arg#0->return
+<java.lang.Integer: java.lang.Integer valueOf(java.lang.String)>
+	arg#0->return
+<java.lang.Integer: java.lang.Integer valueOf(java.lang.String,int)>
+	arg#0->return
+	arg#1->return
+<java.lang.Integer: java.lang.Integer toString(int)>
+	arg#0->return
+<java.lang.Integer: java.lang.Integer toString(int,int)>
+	arg#0->return
+	arg#1->return
+
+<java.lang.Short: java.lang.Short valueOf(short)>
+	arg#0->return
+<java.lang.Short: java.lang.Short valueOf(java.lang.String)>
+	arg#0->return
+<java.lang.Short: java.lang.Short valueOf(java.lang.String,int)>
+	arg#0->return
+	arg#1->return
+<java.lang.Short: long parseShort(java.lang.String)>
+	arg#0->return
+<java.lang.Short: long parseShort(java.lang.String,int)>
+	arg#0->return
+	arg#1->return
+
+<java.lang.Long: void <init>(long)>
+	this->return
+	arg#1->return
+	arg#1->this
+<java.lang.Long: void <init>(java.lang.String)>
+	this->return
+	arg#1->return
+	arg#1->this
+<java.lang.Long: long parseLong(java.lang.String)>
+	this->return
+	arg#1->return
+	arg#1->this
+<java.lang.Long: long parseLong(java.lang.String,int)>
+	this->return
+	arg#1->return
+	arg#1->this
+	arg#2->return
+	arg#2->this
+<java.lang.Long: java.lang.Long valueOf(long)>
+	arg#0->return
+<java.lang.Long: java.lang.Long valueOf(java.lang.String)>
+	arg#0->return
+<java.lang.Long: java.lang.Long valueOf(java.lang.String,int)>
+	arg#0->return
+	arg#1->return
+<java.lang.Long: java.lang.String toString(long)>
+	arg#0->return
+<java.lang.Long: java.lang.String toString(long,int)>
+	arg#0->return
+	arg#1->return
+
+<java.lang.Float: void <init>(float)>
+	this->return
+	arg#1->return
+	arg#1->this
+<java.lang.Float: void <init>(java.lang.String)>
+	this->return
+	arg#1->return
+	arg#1->this
+<java.lang.Float: float parseFloat(java.lang.String)>
+	this->return
+	arg#1->return
+	arg#1->this
+<java.lang.Float: java.lang.Float valueOf(float)>
+	arg#0->return
+<java.lang.Float: java.lang.Float valueOf(java.lang.String)>
+	arg#0->return
+<java.lang.Float: java.lang.String toString(float)>
+	arg#0->return
+
+<java.lang.Double: void <init>(double)>
+	this->return
+	arg#1->return
+	arg#1->this
+<java.lang.Double: void <init>(java.lang.String)>
+	this->return
+	arg#1->return
+	arg#1->this
+<java.lang.Double: double parseDouble(java.lang.String)>
+	this->return
+	arg#1->return
+	arg#1->this
+<java.lang.Double: java.lang.Double valueOf(double)>
+	arg#0->return
+<java.lang.Double: java.lang.Double valueOf(java.lang.String)>
+	arg#0->return
+<java.lang.Double: java.lang.String toString(double)>
+	arg#0->return
+
+<java.lang.Boolean: void <init>(boolean)>
+	this->return
+	arg#1->return
+	arg#1->this
+<java.lang.Boolean: void <init>(java.lang.String)>
+	this->return
+	arg#1->return
+	arg#1->this
+<java.lang.Boolean: java.lang.Boolean valueOf(boolean)>
+	arg#0->return
+<java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>
+	arg#0->return
+<java.lang.Boolean: java.lang.String toString(boolean)>
+	arg#0->return
+
+<java.lang.Character: void <init>(char)>
+	this->return
+	arg#1->return
+	arg#1->this
+<java.lang.Character: java.lang.Boolean valueOf(char)>
+	arg#0->return
+<java.lang.Character: char forDigit(int,int)>
+	this->return
+	arg#1->return
+	arg#1->this
+	arg#2->return
+	arg#2->this
+
+<java.lang.Error: void <init>(java.lang.String)>
+	this->return
+	arg#1->return
+	arg#1->this
+
+<java.lang.Exception: void <init>(java.lang.String)>
+	this->return
+	arg#1->return
+	arg#1->this
+
+<java.lang.ref.Reference: void <init>()>
+	this->return
+<java.lang.ref.WeakReference: void <init>(java.lang.Object)>
+	this->return
+	arg#1->return
+	arg#1->this
