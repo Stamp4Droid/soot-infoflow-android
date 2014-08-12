@@ -2275,7 +2275,7 @@
 	arg#0->return
 
 
-# java.lang.* models, designed to be equivalent to STAMP models
+# java.lang.* models, designed to be equivalent to EasyTaintWrapper models
 
 <java.lang.StringBuilder: void <init>(java.lang.String)>
 	this->return
@@ -2297,6 +2297,10 @@
 	this->return
 	arg#1->return
 	arg#1->this
+	arg#2->return
+	arg#2->this
+	arg#3->return
+	arg#3->this
 <java.lang.StringBuilder: java.lang.StringBuilder append(double)>
 	this->return
 	arg#1->return
@@ -2329,32 +2333,52 @@
 	this->return
 	arg#1->return
 	arg#1->this
+	arg#2->return
+	arg#2->this
+	arg#3->return
+	arg#3->this
 <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.StringBuffer)>
 	this->return
 	arg#1->return
 	arg#1->this
 <java.lang.StringBuilder: java.lang.StringBuilder insert(int,boolean)>
 	this->return
+	arg#1->return
+	arg#1->this
 	arg#2->return
 	arg#2->this
 <java.lang.StringBuilder: java.lang.StringBuilder insert(int,char)>
 	this->return
+	arg#1->return
+	arg#1->this
 	arg#2->return
 	arg#2->this
 <java.lang.StringBuilder: java.lang.StringBuilder insert(int,char[])>
 	this->return
+	arg#1->return
+	arg#1->this
 	arg#2->return
 	arg#2->this
 <java.lang.StringBuilder: java.lang.StringBuilder insert(int,char[],int,int)>
 	this->return
+	arg#1->return
+	arg#1->this
 	arg#2->return
 	arg#2->this
+	arg#3->return
+	arg#3->this
+	arg#4->return
+	arg#4->this
 <java.lang.StringBuilder: java.lang.StringBuilder insert(int,double)>
 	this->return
+	arg#1->return
+	arg#1->this
 	arg#2->return
 	arg#2->this
 <java.lang.StringBuilder: java.lang.StringBuilder insert(int,float)>
 	this->return
+	arg#1->return
+	arg#1->this
 	arg#2->return
 	arg#2->this
 <java.lang.StringBuilder: java.lang.StringBuilder insert(int,int)>
@@ -2365,24 +2389,38 @@
 	arg#2->this
 <java.lang.StringBuilder: java.lang.StringBuilder insert(int,long)>
 	this->return
+	arg#1->return
+	arg#1->this
 	arg#2->return
 	arg#2->this
 <java.lang.StringBuilder: java.lang.StringBuilder insert(int,java.lang.Object)>
 	this->return
+	arg#1->return
+	arg#1->this
 	arg#2->return
 	arg#2->this
 <java.lang.StringBuilder: java.lang.StringBuilder insert(int,java.lang.String)>
 	this->return
+	arg#1->return
+	arg#1->this
 	arg#2->return
 	arg#2->this
 <java.lang.StringBuilder: java.lang.StringBuilder insert(int,java.lang.CharSequence)>
 	this->return
+	arg#1->return
+	arg#1->this
 	arg#2->return
 	arg#2->this
 <java.lang.StringBuilder: java.lang.StringBuilder insert(int,java.lang.CharSequence,int,int)>
 	this->return
+	arg#1->return
+	arg#1->this
 	arg#2->return
 	arg#2->this
+	arg#3->return
+	arg#3->this
+	arg#4->return
+	arg#4->this
 
 <java.lang.StringBuffer: void <init>(java.lang.String)>
 	this->return
@@ -2404,6 +2442,10 @@
 	this->return
 	arg#1->return
 	arg#1->this
+	arg#2->return
+	arg#2->this
+	arg#3->return
+	arg#3->this
 <java.lang.StringBuffer: java.lang.StringBuffer append(double)>
 	this->return
 	arg#1->return
@@ -2436,36 +2478,58 @@
 	this->return
 	arg#1->return
 	arg#1->this
+	arg#2->return
+	arg#2->this
+	arg#3->return
+	arg#3->this
 <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.StringBuffer)>
 	this->return
 	arg#1->return
 	arg#1->this
 <java.lang.StringBuffer: java.lang.StringBuffer insert(int,boolean)>
 	this->return
+	arg#1->return
+	arg#1->this
 	arg#2->return
 	arg#2->this
 <java.lang.StringBuffer: java.lang.StringBuffer insert(int,char)>
 	this->return
+	arg#1->return
+	arg#1->this
 	arg#2->return
 	arg#2->this
 <java.lang.StringBuffer: java.lang.StringBuffer insert(int,char[])>
 	this->return
+	arg#1->return
+	arg#1->this
 	arg#2->return
 	arg#2->this
 <java.lang.StringBuffer: java.lang.StringBuffer insert(int,char[],int,int)>
 	this->return
+	arg#1->return
+	arg#1->this
 	arg#2->return
 	arg#2->this
+	arg#3->return
+	arg#3->this
+	arg#4->return
+	arg#4->this
 <java.lang.StringBuffer: java.lang.StringBuffer insert(int,double)>
 	this->return
+	arg#1->return
+	arg#1->this
 	arg#2->return
 	arg#2->this
 <java.lang.StringBuffer: java.lang.StringBuffer insert(int,float)>
 	this->return
+	arg#1->return
+	arg#1->this
 	arg#2->return
 	arg#2->this
 <java.lang.StringBuffer: java.lang.StringBuffer insert(int,int)>
 	this->return
+	arg#1->return
+	arg#1->this
 	arg#2->return
 	arg#2->this
 <java.lang.StringBuffer: java.lang.StringBuffer insert(int,long)>
@@ -2476,20 +2540,32 @@
 	arg#2->this
 <java.lang.StringBuffer: java.lang.StringBuffer insert(int,java.lang.Object)>
 	this->return
+	arg#1->return
+	arg#1->this
 	arg#2->return
 	arg#2->this
 <java.lang.StringBuffer: java.lang.StringBuffer insert(int,java.lang.String)>
 	this->return
+	arg#1->return
+	arg#1->this
 	arg#2->return
 	arg#2->this
 <java.lang.StringBuffer: java.lang.StringBuffer insert(int,java.lang.CharSequence)>
 	this->return
+	arg#1->return
+	arg#1->this
 	arg#2->return
 	arg#2->this
 <java.lang.StringBuffer: java.lang.StringBuffer insert(int,java.lang.CharSequence,int,int)>
 	this->return
+	arg#1->return
+	arg#1->this
 	arg#2->return
 	arg#2->this
+	arg#3->return
+	arg#3->this
+	arg#4->return
+	arg#4->this
 
 <java.lang.String: void <init>(byte[])>
 	this->return
@@ -2499,14 +2575,26 @@
 	this->return
 	arg#1->return
 	arg#1->this
+	arg#2->return
+	arg#2->this
+	arg#3->return
+	arg#3->this
 <java.lang.String: void <init>(byte[],int,int,java.lang.String)>
 	this->return
 	arg#1->return
 	arg#1->this
+	arg#2->return
+	arg#2->this
+	arg#3->return
+	arg#3->this
+	arg#4->return
+	arg#4->this
 <java.lang.String: void <init>(byte[],java.lang.String)>
 	this->return
 	arg#1->return
 	arg#1->this
+	arg#2->return
+	arg#2->this
 <java.lang.String: void <init>(char[])>
 	this->return
 	arg#1->return
@@ -2515,10 +2603,18 @@
 	this->return
 	arg#1->return
 	arg#1->this
+	arg#2->return
+	arg#2->this
+	arg#3->return
+	arg#3->this
 <java.lang.String: void <init>(int[],int,int)>
 	this->return
 	arg#1->return
 	arg#1->this
+	arg#2->return
+	arg#2->this
+	arg#3->return
+	arg#3->this
 <java.lang.String: void <init>(java.lang.String)>
 	this->return
 	arg#1->return
@@ -2540,6 +2636,8 @@
 	arg#0->return
 <java.lang.String: java.lang.String valueOf(char[],int,int)>
 	arg#0->return
+	arg#1->return
+	arg#2->return
 <java.lang.String: java.lang.String valueOf(double)>
 	arg#0->return
 <java.lang.String: java.lang.String valueOf(float)>
@@ -2554,20 +2652,32 @@
 <java.lang.String: java.lang.String concat(java.lang.String)>
 	this->return
 	arg#1->return
+	arg#1->this
 
 <java.lang.String: java.lang.String format(java.util.Locale,java.lang.String,java.lang.Object[])>
-	arg#2->return
-	arg#3->return
-<java.lang.String: java.lang.String format(java.lang.String,java.lang.Object[])>
+	this->return
 	arg#1->return
+	arg#1->this
 	arg#2->return
+	arg#2->this
+	arg#3->return
+	arg#3->this
+<java.lang.String: java.lang.String format(java.lang.String,java.lang.Object[])>
+	this->return
+	arg#1->return
+	arg#1->this
+	arg#2->return
+	arg#2->this
 
 <java.lang.String: char[] toCharArray()>
 	this->return
 
 <java.lang.String: java.lang.String replaceAll(java.lang.String,java.lang.String)>
 	this->return
+	arg#1->return
+	arg#1->this
 	arg#2->return
+	arg#2->this
 
 <java.lang.Byte: java.lang.Byte valueOf(byte)>
 	arg#0->return
@@ -2575,10 +2685,17 @@
 	arg#0->return
 <java.lang.Byte: java.lang.Byte valueOf(java.lang.String,int)>
 	arg#0->return
+	arg#1->return
 <java.lang.Byte: long parseByte(java.lang.String)>
-	arg#0->return
+	this->return
+	arg#1->return
+	arg#1->this
 <java.lang.Byte: long parseByte(java.lang.String,int)>
-	arg#0->return
+	this->return
+	arg#1->return
+	arg#1->this
+	arg#2->return
+	arg#2->this
 
 <java.lang.Integer: java.lang.String toBinaryString(int)>
 	arg#0->return
@@ -2599,16 +2716,19 @@
 	arg#0->return
 <java.lang.Integer: int parseInt(java.lang.String,int)>
 	arg#0->return
+	arg#1->return
 <java.lang.Integer: java.lang.Integer valueOf(int)>
 	arg#0->return
 <java.lang.Integer: java.lang.Integer valueOf(java.lang.String)>
 	arg#0->return
 <java.lang.Integer: java.lang.Integer valueOf(java.lang.String,int)>
 	arg#0->return
+	arg#1->return
 <java.lang.Integer: java.lang.Integer toString(int)>
 	arg#0->return
 <java.lang.Integer: java.lang.Integer toString(int,int)>
 	arg#0->return
+	arg#1->return
 
 <java.lang.Short: java.lang.Short valueOf(short)>
 	arg#0->return
@@ -2616,10 +2736,12 @@
 	arg#0->return
 <java.lang.Short: java.lang.Short valueOf(java.lang.String,int)>
 	arg#0->return
+	arg#1->return
 <java.lang.Short: long parseShort(java.lang.String)>
 	arg#0->return
 <java.lang.Short: long parseShort(java.lang.String,int)>
 	arg#0->return
+	arg#1->return
 
 <java.lang.Long: void <init>(long)>
 	this->return
@@ -2630,19 +2752,27 @@
 	arg#1->return
 	arg#1->this
 <java.lang.Long: long parseLong(java.lang.String)>
-	arg#0->return
+	this->return
+	arg#1->return
+	arg#1->this
 <java.lang.Long: long parseLong(java.lang.String,int)>
-	arg#0->return
+	this->return
+	arg#1->return
+	arg#1->this
+	arg#2->return
+	arg#2->this
 <java.lang.Long: java.lang.Long valueOf(long)>
 	arg#0->return
 <java.lang.Long: java.lang.Long valueOf(java.lang.String)>
 	arg#0->return
 <java.lang.Long: java.lang.Long valueOf(java.lang.String,int)>
 	arg#0->return
+	arg#1->return
 <java.lang.Long: java.lang.String toString(long)>
 	arg#0->return
 <java.lang.Long: java.lang.String toString(long,int)>
 	arg#0->return
+	arg#1->return
 
 <java.lang.Float: void <init>(float)>
 	this->return
@@ -2653,7 +2783,9 @@
 	arg#1->return
 	arg#1->this
 <java.lang.Float: float parseFloat(java.lang.String)>
-	arg#0->return
+	this->return
+	arg#1->return
+	arg#1->this
 <java.lang.Float: java.lang.Float valueOf(float)>
 	arg#0->return
 <java.lang.Float: java.lang.Float valueOf(java.lang.String)>
@@ -2670,7 +2802,9 @@
 	arg#1->return
 	arg#1->this
 <java.lang.Double: double parseDouble(java.lang.String)>
-	arg#0->return
+	this->return
+	arg#1->return
+	arg#1->this
 <java.lang.Double: java.lang.Double valueOf(double)>
 	arg#0->return
 <java.lang.Double: java.lang.Double valueOf(java.lang.String)>
@@ -2700,7 +2834,11 @@
 <java.lang.Character: java.lang.Boolean valueOf(char)>
 	arg#0->return
 <java.lang.Character: char forDigit(int,int)>
-	arg#0->this
+	this->return
+	arg#1->return
+	arg#1->this
+	arg#2->return
+	arg#2->this
 
 <java.lang.Error: void <init>(java.lang.String)>
 	this->return
@@ -2713,13 +2851,14 @@
 	arg#1->this
 
 <java.lang.ref.Reference: void <init>()>
+	this->return
 <java.lang.ref.WeakReference: void <init>(java.lang.Object)>
 	this->return
 	arg#1->return
 	arg#1->this
 
 
-# Other EasyTaintWrapper models, currently not discovered by modelgen, providing manual models
+# Other EasyTaintWrapper models, currently not discovered by modelgen
 
 <java.util.Stack: java.lang.Object push(java.lang.Object)>
 	this->return
@@ -2728,8 +2867,10 @@
 
 <java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>
 	this->return
-	arg#2->this
+	arg#1->return
+	arg#1->this
 	arg#2->return
+	arg#2->this
 
 <java.util.Map: void clear()>
 
@@ -2753,21 +2894,40 @@
 	arg#1->return
 	arg#1->this
 
+<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>
+	this->return
+	arg#1->return
+	arg#1->this
+	arg#2->return
+	arg#2->this
+
 <java.util.Map: java.lang.Object putAll(java.util.Map)>
 	this->return
 	arg#1->return
 	arg#1->this
 
 <java.util.List: boolean add(java.lang.Object)>
+	this->return
+	arg#1->return
 	arg#1->this
 
 <java.util.List: void add(int,java.lang.Object)>
+	this->return
+	arg#1->return
+	arg#1->this
+	arg#2->return
 	arg#2->this
 
 <java.util.List: boolean addAll(java.util.Collection)>
+	this->return
+	arg#1->return
 	arg#1->this
 
 <java.util.List: boolean addAll(int,java.util.Collection)>
+	this->return
+	arg#1->return
+	arg#1->this
+	arg#2->return
 	arg#2->this
 
 <java.util.List: void clear()>
@@ -2784,17 +2944,25 @@
 	arg#1->this
 
 <java.util.Set: boolean add(java.lang.Object)>
+	this->return
+	arg#1->return
 	arg#1->this
 
 <java.util.Set: boolean addAll(java.util.Collection)>
+	this->return
+	arg#1->return
 	arg#1->this
 
 <java.util.Set: void clear()>
 
 <java.util.Collection: boolean add(java.lang.Object)>
+	this->return
+	arg#1->return
 	arg#1->this
 
 <java.util.Collection: boolean addAll(java.util.Collection)>
+	this->return
+	arg#1->return
 	arg#1->this
 
 <java.util.Collection: void clear()>
@@ -2805,14 +2973,20 @@
 	arg#1->this
 
 <java.util.Vector: boolean addAll(java.util.Collection)>
+	this->return
+	arg#1->return
 	arg#1->this
 
 <java.util.Vector: void clear()>
 
 <java.util.Queue: boolean add(java.lang.Object)>
+	this->return
+	arg#1->return
 	arg#1->this
 
 <java.util.Queue: boolean offer(java.lang.Object)>
+	this->return
+	arg#1->return
 	arg#1->this
 
 <java.util.Queue: java.lang.Object remove()>
@@ -2853,6 +3027,8 @@
 	this->return
 	arg#1->return
 	arg#1->this
+	arg#2->return
+	arg#2->this
 
 <java.math.BigInteger: java.math.BigInteger valueOf(long)>
 	arg#0->return
@@ -2871,10 +3047,15 @@
 	this->return
 	arg#1->return
 	arg#1->this
+	arg#2->return
+	arg#2->this
 
 <java.text.MessageFormat: java.lang.String format(java.lang.String,java.lang.Object[])>
-	arg#0->return
+	this->return
 	arg#1->return
+	arg#1->this
+	arg#2->return
+	arg#2->this
 
 <java.net.URI: void <init>(java.lang.String,java.lang.String,java.lang.String,int,java.lang.String,java.lang.String,java.lang.String)>
 	this->return
@@ -2899,8 +3080,12 @@
 	arg#1->this
 	arg#2->return
 	arg#2->this
+	arg#3->return
+	arg#3->this
 
 <java.net.HttpURLConnection: void setRequestMethod(java.lang.String)>
+	this->return
+	arg#1->return
 	arg#1->this
 
 <java.util.Collections: java.util.List synchronizedCollection(java.util.Collection)>
@@ -2950,6 +3135,10 @@
 	arg#1->return
 
 <android.content.ContentValues: void put(java.lang.String,java.lang.Integer)>
+	this->return
+	arg#1->return
+	arg#1->this
+	arg#2->return
 	arg#2->this
 
 <android.content.Intent: void <init>(android.content.Context,java.lang.Class)>
@@ -2971,121 +3160,169 @@
 
 <android.content.Intent: android.content.Intent putExtra(java.lang.String,boolean)>
 	this->return
+	arg#1->return
+	arg#1->this
 	arg#2->return
 	arg#2->this
 
 <android.content.Intent: android.content.Intent putExtra(java.lang.String,byte)>
 	this->return
+	arg#1->return
+	arg#1->this
 	arg#2->return
 	arg#2->this
 
 <android.content.Intent: android.content.Intent putExtra(java.lang.String,char)>
 	this->return
+	arg#1->return
+	arg#1->this
 	arg#2->return
 	arg#2->this
 
 <android.content.Intent: android.content.Intent putExtra(java.lang.String,short)>
 	this->return
+	arg#1->return
+	arg#1->this
 	arg#2->return
 	arg#2->this
 
 <android.content.Intent: android.content.Intent putExtra(java.lang.String,long)>
 	this->return
+	arg#1->return
+	arg#1->this
 	arg#2->return
 	arg#2->this
 
 <android.content.Intent: android.content.Intent putExtra(java.lang.String,int)>
 	this->return
+	arg#1->return
+	arg#1->this
 	arg#2->return
 	arg#2->this
 
 <android.content.Intent: android.content.Intent putExtra(java.lang.String,float)>
 	this->return
+	arg#1->return
+	arg#1->this
 	arg#2->return
 	arg#2->this
 
 <android.content.Intent: android.content.Intent putExtra(java.lang.String,double)>
 	this->return
+	arg#1->return
+	arg#1->this
 	arg#2->return
 	arg#2->this
 
 <android.content.Intent: android.content.Intent putExtra(java.lang.String,java.lang.String)>
 	this->return
+	arg#1->return
+	arg#1->this
 	arg#2->return
 	arg#2->this
 
 <android.content.Intent: android.content.Intent putExtra(java.lang.String,java.lang.CharSequence)>
 	this->return
+	arg#1->return
+	arg#1->this
 	arg#2->return
 	arg#2->this
 
 <android.content.Intent: android.content.Intent putExtra(java.lang.String,android.os.Parcelable)>
 	this->return
+	arg#1->return
+	arg#1->this
 	arg#2->return
 	arg#2->this
 
 <android.content.Intent: android.content.Intent putExtra(java.lang.String,android.os.Parcelable[])>
 	this->return
+	arg#1->return
+	arg#1->this
 	arg#2->return
 	arg#2->this
 
 <android.content.Intent: android.content.Intent putExtra(java.lang.String,java.io.Serializable)>
 	this->return
+	arg#1->return
+	arg#1->this
 	arg#2->return
 	arg#2->this
 
 <android.content.Intent: android.content.Intent putExtra(java.lang.String,boolean[])>
 	this->return
+	arg#1->return
+	arg#1->this
 	arg#2->return
 	arg#2->this
 
 <android.content.Intent: android.content.Intent putExtra(java.lang.String,byte[])>
 	this->return
+	arg#1->return
+	arg#1->this
 	arg#2->return
 	arg#2->this
 
 <android.content.Intent: android.content.Intent putExtra(java.lang.String,short[])>
 	this->return
+	arg#1->return
+	arg#1->this
 	arg#2->return
 	arg#2->this
 
 <android.content.Intent: android.content.Intent putExtra(java.lang.String,char[])>
 	this->return
+	arg#1->return
+	arg#1->this
 	arg#2->return
 	arg#2->this
 
 <android.content.Intent: android.content.Intent putExtra(java.lang.String,int[])>
 	this->return
+	arg#1->return
+	arg#1->this
 	arg#2->return
 	arg#2->this
 
 <android.content.Intent: android.content.Intent putExtra(java.lang.String,long[])>
 	this->return
+	arg#1->return
+	arg#1->this
 	arg#2->return
 	arg#2->this
 
 <android.content.Intent: android.content.Intent putExtra(java.lang.String,float[])>
 	this->return
+	arg#1->return
+	arg#1->this
 	arg#2->return
 	arg#2->this
 
 <android.content.Intent: android.content.Intent putExtra(java.lang.String,double[])>
 	this->return
+	arg#1->return
+	arg#1->this
 	arg#2->return
 	arg#2->this
 
 <android.content.Intent: android.content.Intent putExtra(java.lang.String,java.lang.String[])>
 	this->return
+	arg#1->return
+	arg#1->this
 	arg#2->return
 	arg#2->this
 
 <android.content.Intent: android.content.Intent putExtra(java.lang.String,java.lang.CharSequence[])>
 	this->return
+	arg#1->return
+	arg#1->this
 	arg#2->return
 	arg#2->this
 
 <android.content.Intent: android.content.Intent putExtra(java.lang.String,android.os.Bundle)>
 	this->return
+	arg#1->return
+	arg#1->this
 	arg#2->return
 	arg#2->this
 
@@ -3093,19 +3330,26 @@
 	this->return
 	arg#1->return
 	arg#1->this
+	arg#2->return
+	arg#2->this
 
 <android.content.Intent: android.content.Intent putExtras(android.os.Bundle)>
 	this->return
 	arg#1->return
 	arg#1->this
+	arg#2->return
+	arg#2->this
 
 <android.content.ContextWrapper: android.content.Context getBaseContext()>
-	this->return
 
 <android.content.IntentFilter: void addAction(java.lang.String)>
+	this->return
+	arg#1->return
 	arg#1->this
 
 <android.database.MatrixCursor: void addRow(java.lang.Object[])>
+	this->return
+	arg#1->return
 	arg#1->this
 
 <org.apache.http.message.BasicNameValuePair: void <init>(java.lang.String,java.lang.String)>
@@ -3124,16 +3368,22 @@
 	this->return
 	arg#1->return
 	arg#1->this
+	arg#2->return
+	arg#2->this
 
 <org.apache.http.entity.StringEntity: void <init>(java.lang.String,org.apache.http.entity.ContentType)>
 	this->return
 	arg#1->return
 	arg#1->this
+	arg#2->return
+	arg#2->this
 
 <org.apache.http.entity.StringEntity: void <init>(java.lang.String,java.lang.String)>
 	this->return
 	arg#1->return
 	arg#1->this
+	arg#2->return
+	arg#2->this
 
 <org.apache.http.entity.StringEntity: void <init>(java.lang.String,java.lang.String,java.lang.String)>
 	this->return
@@ -3151,6 +3401,7 @@
 
 <java.util.Arrays: java.lang.Object[] copyOf(java.lang.Object[],int)>
 	arg#0->return
+	arg#1->return
 
 <java.util.UUID: void <init>(long,long)>
 	this->return
@@ -3183,6 +3434,10 @@
 	this->return
 	arg#1->return
 	arg#1->this
+	arg#2->return
+	arg#2->this
+	arg#3->return
+	arg#3->this
 
 <java.nio.ByteBuffer: java.nio.ByteBuffer put(java.nio.ByteBuffer)>
 	this->return
@@ -3191,6 +3446,8 @@
 
 <java.nio.ByteBuffer: java.nio.ByteBuffer put(int,byte)>
 	this->return
+	arg#1->return
+	arg#1->this
 	arg#2->return
 	arg#2->this
 
@@ -3201,6 +3458,8 @@
 
 <java.nio.ByteBuffer: java.nio.ByteBuffer putChar(int,char)>
 	this->return
+	arg#1->return
+	arg#1->this
 	arg#2->return
 	arg#2->this
 
@@ -3211,6 +3470,8 @@
 
 <java.nio.ByteBuffer: java.nio.ByteBuffer putDouble(int,double)>
 	this->return
+	arg#1->return
+	arg#1->this
 	arg#2->return
 	arg#2->this
 
@@ -3221,6 +3482,8 @@
 
 <java.nio.ByteBuffer: java.nio.ByteBuffer putFloat(int,float)>
 	this->return
+	arg#1->return
+	arg#1->this
 	arg#2->return
 	arg#2->this
 
@@ -3231,6 +3494,8 @@
 
 <java.nio.ByteBuffer: java.nio.ByteBuffer putInt(int,int)>
 	this->return
+	arg#1->return
+	arg#1->this
 	arg#2->return
 	arg#2->this
 
@@ -3241,6 +3506,8 @@
 
 <java.nio.ByteBuffer: java.nio.ByteBuffer putLong(int,long)>
 	this->return
+	arg#1->return
+	arg#1->this
 	arg#2->return
 	arg#2->this
 
